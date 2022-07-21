@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* ----------Logged Out View---------- */
 /* Navigation Bar Start */
 .head_nav {
   background: #fdf5e6;
@@ -291,3 +292,59 @@
   transition: all 0.4s;
 }
 /* Contact End */
+
+/* ----------Logged In View---------- */
+/* Navigation Bar Start */
+.head_nav .btn_user {
+  background: transparent;
+  border: none;
+  color: #6f4e37;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.head_nav .btn_user:hover {
+  color: #ffdead;
+}
+
+.head_nav .btn_cart {
+  background: transparent;
+  border: none;
+  color: #6f4e37;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.head_nav .btn_cart:hover {
+  color: #ffdead;
+}
+/* Navigation Bar End */
+
+/* Cart Start */
+.cart p {
+  color: #6f4e37;
+  font-weight: 900;
+}
+
+.cart #product_img {
+  height: 150px;
+}
+
+.product_list p {
+  color: #6f4e37;
+}
+/* Cart End */

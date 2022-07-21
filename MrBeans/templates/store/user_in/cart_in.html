@@ -1,0 +1,57 @@
+{% extends 'store/user_in/home_in.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- Cart Start -->
+
+  <section class="cart">
+    <div class="container py-5">
+      <div class="row pt-3 border rounded">
+        <div class="col-lg-4">
+          <p>Product</p>
+        </div>
+        <div class="col-lg-2">
+          <p>Unit Price</p>
+        </div>
+        <div class="col-lg-2">
+          <p>Quantity</p>
+        </div>
+        <div class="col-lg-2">
+          <p>Total Price</p>
+        </div>
+        <div class="col-lg-2">
+          <p>Actions</p>
+        </div>
+      </div>
+
+      <div class="product_list row border rounded">
+        <div class="row p-3">
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-check pt-2">
+                  <label class="form-check-label">
+                    <img id="product_img" class="rounded mx-auto" src="{% static 'images/robusta.png' %}" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-4 py-3">
+                <p><strong>Robusta Coffee</strong></p>
+                <p style="font-size: 12px; margin: 0; padding: 0">
+                  16oz (453g)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 pt-3">
+            <p>₱ 150</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart End -->
+
+{% endblock content %}

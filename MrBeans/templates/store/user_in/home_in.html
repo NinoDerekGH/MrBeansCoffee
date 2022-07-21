@@ -32,7 +32,7 @@
 
   <nav class="head_nav navbar sticky-top navbar-expand-lg">
     <div class="container">
-      <a href="home.html"><img src="{% static 'images/logo.png' %}" alt="Mr. Beans Logo"></a>
+      <a href="{% url 'home_in' %}"><img src="{% static 'images/logo.png' %}" alt="Mr. Beans Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span><i id="bar" class="bi bi-list"></i></span>
@@ -40,28 +40,36 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'home_in' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+            <a class="nav-link" href="{% url 'shop_in' %}">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'faqs' %}">FAQs</a>
+            <a class="nav-link" href="{% url 'faqs_in' %}">FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'about_in' %}">About</a>
           </li>
           <li class="nav-item me-2">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            <a class="nav-link" href="{% url 'contact_in' %}">Contact</a>
           </li>
           <li class="nav-item py-1 px-2">
             <a href="#"><i class="bi bi-search"></i></a>
           </li>
-          <li class="nav-item">
-            <a href="#"><button class="btn_register mx-1" type="button">Register</button></a>
+          <li class="nav-item dropdown">
+            <button class="btn_user btn dropdown-toggle mx-1" type="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle"></i>
+              <span class="ms-2">Sample User</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-center" href="{% url 'home_out' %}">Logout</a>
+              </li>
+            </ul>
           </li>
-          <li class=nav-item">
-            <a href="#"><button class="btn_signin mx-1" type="button">Login</button></a>
+          <li class="nav-item">
+            <a href="{% url 'cart_in' %}"><button class="btn_cart mx-1" type="button"><i class="bi bi-cart4"></i></button></a>
           </li>
         </ul>
       </div>
@@ -160,20 +168,20 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <a href="#"><img src="{% static 'images/logo.png' %}" alt="Mr. Beans Logo"></a>
+          <a href="{% url 'home_in' %}"><img src="{% static 'images/logo.png' %}" alt="Mr. Beans Logo"></a>
         </div>
 
         <div class="col md-6 col-lg-2">
           <h4>Menu</h4>
           <ul class="list-unstyled">
             <li class="my-3">
-              <a href="{% url 'shop' %}" class="foot-item">Shop</a>
+              <a href="{% url 'shop_in' %}" class="foot-item">Shop</a>
             </li>
             <li class="my-3">
-              <a href="{% url 'faqs' %}" class="foot-item">FAQs</a>
+              <a href="{% url 'faqs_in' %}" class="foot-item">FAQs</a>
             </li>
             <li class="my-3">
-              <a href="{% url 'about' %}" class="foot-item">About Us</a>
+              <a href="{% url 'about_in' %}" class="foot-item">About Us</a>
             </li>
           </ul>
         </div>
@@ -221,9 +229,14 @@
 
   <!-- Footer End -->
 
-  <!-- Bootstrap JS & Popper Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  <!-- Bootstrap Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
 
 </body>
